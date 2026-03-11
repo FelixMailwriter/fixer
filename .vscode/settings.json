@@ -1,0 +1,14 @@
+{
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "python.languageServer": "Pylance",
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4,
+    "editor.insertSpaces": true,
+    "files.trimTrailingWhitespace": true,
+    "[xml]": {
+        "editor.formatOnSave": true
+    },
+    "python.analysis.extraPaths": [
+        "/home/arama/odoo17/odoo-src"
+    ]
+}

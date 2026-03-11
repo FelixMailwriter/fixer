@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem id="menu_fixer_root" name="Fixer" sequence="60"/>
+
+    <menuitem id="menu_fixer_jobs" name="Заявки" parent="menu_fixer_root" sequence="10"/>
+
+    <menuitem id="menu_fixer_jobs_all" name="Все заявки" parent="menu_fixer_jobs" action="action_fixer_job" sequence="10"/>
+
+    <menuitem id="menu_fixer_staff" name="Сотрудники" parent="menu_fixer_root" sequence="20"/>
+
+    <menuitem id="menu_fixer_workman" name="Список сотрудников" parent="menu_fixer_staff" action="action_fixer_workman" sequence="10"/>
+
+    <menuitem id="menu_common" name="Справочники" parent="menu_fixer_root" sequence="30"/>
+
+    <menuitem id="equipment_menu" name="Оборудование" parent="menu_common" action="fixer_equipment_action" sequence="10"/>
+
+    <menuitem id="jobtype_menu" name="Типы работ" parent="menu_common" action="fixer_jobtype_action" sequence="20"/>
+</odoo>

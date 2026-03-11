@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_fixer_client,fixer.client,fixer.model_fixer_client,,1,1,1,1
+access_fixer_jobtype,fixer.jobtype,fixer.model_fixer_jobtype,,1,1,1,1
+access_fixer_equipment,fixer.equipment,fixer.model_fixer_equipment,,1,1,1,1
+access_fixer_workman,fixer.workman,fixer.model_fixer_workman,,1,1,1,1
+access_fixer_job,fixer.job,fixer.model_fixer_job,,1,1,1,1

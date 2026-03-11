@@ -1,0 +1,56 @@
+<odoo>
+    <record id="fixer_client_form" model="ir.ui.view">
+        <field name="name">fixer.client.form</field>
+        <field name="model">fixer.client</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Основная информация">
+                            <field name="client_id"/>
+                            <field name="name"/>
+                            <field name="phone"/>
+                            <field name="mobile"/>
+                            <field name="email"/>
+                            <!-- <field name="customer_rank"/> -->
+                            <field name="is_company"/>
+                            <field name="vat"/>
+                        </group>
+                        <group string="Адрес">
+                            <field name="country_id"/>
+                            <field name="street"/>
+                            <field name="city"/>
+                            <field name="zip"/>
+                        </group>
+                    </group>
+                    <field name="description" colspan="2"/>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="view_client_tree" model="ir.ui.view">
+        <field name="name">fixer.client.tree</field>
+        <field name="model">fixer.client</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <!-- <field name="customer_rank"/> -->
+                <field name="is_company"/>
+                <field name="country_id"/>
+                <field name="street"/>
+                <field name="city"/>
+                <field name="zip"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="fixer_client_action" model="ir.actions.act_window">
+        <field name="name">Clients</field>
+        <field name="res_model">fixer.client</field>
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- <menuitem id="fixer_menu_root" name="Fixer" sequence="10"/>
+    <menuitem id="fixer_menu_clients" name="Клиенты" parent="fixer_menu_root" action="fixer_client_action"/> -->
+</odoo>
