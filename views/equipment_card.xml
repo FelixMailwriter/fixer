@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fixer_equipment_card_form" model="ir.ui.view">
+        <field name="name">fixer.equipment.card.form</field>
+        <field name="model">fixer.equipment.card</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group string="Оборудование">
+                            <field name="brand"/>
+                            <field name="model_id"/>
+                            <field name="serial_number"/>
+                            <field name="site_id"/>
+                        </group>
+                        <group string="Хладагент">
+                            <field name="refrigerant_type"/>
+                            <field name="refrigerant_amount"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group string="Гарантия">
+                            <field name="install_date"/>
+                            <field name="warranty_end"/>
+                            <field name="warranty_status"/>
+                        </group>
+                        <group string="Техническое обслуживание">
+                            <field name="last_service_date"/>
+                            <field name="next_service_date"/>
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Заказы-наряды">
+                            <field name="order_ids">
+                                <tree>
+                                    <field name="name"/>
+                                    <field name="order_type"/>
+                                    <field name="client_id"/>
+                                    <field name="user_id"/>
+                                </tree>
+                            </field>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="fixer_equipment_card_tree" model="ir.ui.view">
+        <field name="name">fixer.equipment.card.tree</field>
+        <field name="model">fixer.equipment.card</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="brand"/>
+                <field name="model_id"/>
+                <field name="serial_number"/>
+                <field name="site_id"/>
+                <field name="warranty_end"/>
+                <field name="warranty_status"/>
+                <field name="next_service_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fixer_equipment_card" model="ir.actions.act_window">
+        <field name="name">Карточки оборудования</field>
+        <field name="res_model">fixer.equipment.card</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

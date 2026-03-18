@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fixer_brand_form" model="ir.ui.view">
+        <field name="name">fixer.brand.form</field>
+        <field name="model">fixer.brand</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="fixer_brand_tree" model="ir.ui.view">
+        <field name="name">fixer.brand.tree</field>
+        <field name="model">fixer.brand</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fixer_brand" model="ir.actions.act_window">
+        <field name="name">Бренды</field>
+        <field name="res_model">fixer.brand</field>
+        <field name="view_mode">list,form</field>
+    </record>
+</odoo>

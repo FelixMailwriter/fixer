@@ -13,6 +13,7 @@
                             <field name="mobile_phone"/>
                             <field name="work_phone"/>
                             <field name="job_title"/>
+                            <field name="age"/>
                         </group>
                         <group string="Photo">
                             <field name="image_1920" widget="image" class="oe_avatar"/>
@@ -35,6 +36,7 @@
                 <field name="work_phone"/>
                 <field name="description"/>
                 <field name="job_title"/>
+                <field name="age"/>
             </tree>
         </field>
     </record>

@@ -1,4 +1,5 @@
-from odoo import models, fields # type: ignore
+from odoo import models, fields, api # type: ignore
+from odoo.exceptions import ValidationError
 
 class Workman(models.Model):
     _name = 'fixer.workman'
@@ -12,4 +13,12 @@ class Workman(models.Model):
     job_title = fields.Char(related='employee_id.job_title', string='Должность', readonly=False)
     image_1920 = fields.Image(related='employee_id.image_1920', string='Фото', readonly=False)
     description = fields.Text(related='employee_id.notes',string='Описание', readonly=False)
+    age = fields.Integer(string='Возраст')
+
+    @api.constrains('age')
+    def _check_age(self):
+        for rec in self:
+            if rec.age < 18:
+                raise ValidationError('Возраст не может быть меньше 18 лет!')
+
 

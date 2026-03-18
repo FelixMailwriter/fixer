@@ -3,3 +3,7 @@ from . import JobType
 from . import Equipment
 from . import Workman
 from . import Job
+from . import EquipmentModel
+from . import Brand
+from . import EquipmentCard
+from . import orders

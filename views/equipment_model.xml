@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="fixer_equipment_model_form" model="ir.ui.view">
+        <field name="name">fixer.equipment.model.form</field>
+        <field name="model">fixer.equipment.model</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="parent_id"/>
+                        <field name="name"/>
+                        <field name="complete_name"/>
+                    </group>
+                    <field name="child_ids">
+                        <tree>
+                            <field name="complete_name"/>
+                        </tree>
+                    </field>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="fixer_equipment_model_tree" model="ir.ui.view">
+        <field name="name">fixer.equipment.model.tree</field>
+        <field name="model">fixer.equipment.model</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="complete_name"/>
+                <field name="parent_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="action_fixer_equipment_model" model="ir.actions.act_window">
+        <field name="name">Модели оборудования</field>
+        <field name="res_model">fixer.equipment.model</field>
+        <field name="view_mode">list,form</field>
+        <field name="context">{'default_group_by': 'parent_id'}</field>
+    </record>
+</odoo>

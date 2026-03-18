@@ -6,6 +6,8 @@
 
     <menuitem id="menu_fixer_jobs_all" name="Все заявки" parent="menu_fixer_jobs" action="action_fixer_job" sequence="10"/>
 
+    <menuitem id="menu_fixer_orders" name="Заказы" parent="menu_fixer_jobs" action="action_fixer_order" sequence="20"/>
+
     <menuitem id="menu_fixer_staff" name="Сотрудники" parent="menu_fixer_root" sequence="20"/>
 
     <menuitem id="menu_fixer_workman" name="Список сотрудников" parent="menu_fixer_staff" action="action_fixer_workman" sequence="10"/>
@@ -13,6 +15,12 @@
     <menuitem id="menu_common" name="Справочники" parent="menu_fixer_root" sequence="30"/>
 
     <menuitem id="equipment_menu" name="Оборудование" parent="menu_common" action="fixer_equipment_action" sequence="10"/>
+
+    <menuitem id="brand_menu" name="Бренды" parent="menu_common" action="action_fixer_brand" sequence="12"/>
+
+    <menuitem id="equipment_model_menu" name="Модели оборудования" parent="menu_common" action="action_fixer_equipment_model" sequence="15"/>
+
+    <menuitem id="equipment_card_menu" name="Карточки оборудования" parent="menu_common" action="action_fixer_equipment_card" sequence="20"/>
 
     <menuitem id="jobtype_menu" name="Типы работ" parent="menu_common" action="fixer_jobtype_action" sequence="20"/>
 </odoo>
