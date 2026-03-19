@@ -4,9 +4,7 @@
 
     <menuitem id="menu_fixer_jobs" name="Заявки" parent="menu_fixer_root" sequence="10"/>
 
-    <menuitem id="menu_fixer_jobs_all" name="Все заявки" parent="menu_fixer_jobs" action="action_fixer_job" sequence="10"/>
-
-    <menuitem id="menu_fixer_orders" name="Заказы" parent="menu_fixer_jobs" action="action_fixer_order" sequence="20"/>
+    <menuitem id="menu_fixer_orders" name="Заказы" parent="menu_fixer_jobs" action="action_fixer_order" sequence="10"/>
 
     <menuitem id="menu_fixer_staff" name="Сотрудники" parent="menu_fixer_root" sequence="20"/>
 
@@ -23,4 +21,6 @@
     <menuitem id="equipment_card_menu" name="Карточки оборудования" parent="menu_common" action="action_fixer_equipment_card" sequence="20"/>
 
     <menuitem id="jobtype_menu" name="Типы работ" parent="menu_common" action="fixer_jobtype_action" sequence="20"/>
+
+    <menuitem id="order_type_menu" name="Типы заказов" parent="menu_common" action="action_fixer_order_type" sequence="25"/>
 </odoo>

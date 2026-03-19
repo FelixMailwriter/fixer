@@ -16,8 +16,10 @@
                         </group>
                     </group>
 
+                    <field name="order_type_code" invisible="1"/>
+
                     <!-- Монтаж -->
-                    <group string="Монтаж" invisible="order_type != 'installation'">
+                    <group string="Монтаж" invisible="order_type_code != 'installation'">
                         <group>
                             <field name="install_track_length"/>
                             <field name="install_height"/>
@@ -31,7 +33,7 @@
                     </group>
 
                     <!-- Ремонт -->
-                    <group string="Ремонт" invisible="order_type != 'repair'">
+                    <group string="Ремонт" invisible="order_type_code != 'repair'">
                         <group>
                             <field name="repair_symptoms"/>
                             <field name="repair_diagnosis"/>
@@ -44,7 +46,7 @@
                     </group>
 
                     <!-- Заправка -->
-                    <group string="Заправка" invisible="order_type != 'refill'">
+                    <group string="Заправка" invisible="order_type_code != 'refill'">
                         <group>
                             <field name="refrigerant_type"/>
                             <field name="refrigerant_amount"/>
@@ -56,7 +58,7 @@
                     </group>
 
                     <!-- Плановое ТО -->
-                    <group string="Чеклист ТО" invisible="order_type != 'maintenance'">
+                    <group string="Чеклист ТО" invisible="order_type_code != 'maintenance'">
                         <group>
                             <field name="check_filters"/>
                             <field name="check_pressure"/>
@@ -69,7 +71,7 @@
                     </group>
 
                     <!-- Гарантийный -->
-                    <group string="Гарантийный случай" invisible="order_type != 'warranty'">
+                    <group string="Гарантийный случай" invisible="order_type_code != 'warranty'">
                         <field name="warranty_case"/>
                         <field name="is_free"/>
                     </group>

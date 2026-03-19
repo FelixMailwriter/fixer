@@ -6,13 +6,8 @@ class Order(models.Model):
     _description = 'Заказ-наряд'
 
     name = fields.Char(string='Номер заказа', required=True)
-    order_type = fields.Selection([
-        ('installation', 'Монтаж'),
-        ('repair', 'Ремонт'),
-        ('refill', 'Заправка'),
-        ('maintenance', 'Плановое ТО'),
-        ('warranty', 'Гарантийный'),
-    ], string='Тип заказа', required=True)
+    order_type = fields.Many2one('fixer.order.type', string='Тип заказа', required=True)
+    order_type_code = fields.Selection(related='order_type.code', store=False)
     client_id = fields.Many2one('res.partner', string='Клиент', required=True)
     equipment_id = fields.Many2one('fixer.equipment.card', string='Оборудование')
     user_id = fields.Many2one('res.users', string='Автор', default=lambda self: self.env.user, required=True)
@@ -62,5 +57,5 @@ class Order(models.Model):
 
     @api.onchange('order_type')
     def _onchange_order_type(self):
-        if self.order_type == 'warranty':
+        if self.order_type.code == 'warranty':
             self.is_free = True

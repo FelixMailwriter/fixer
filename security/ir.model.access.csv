@@ -3,7 +3,7 @@ access_fixer_client,fixer.client,fixer.model_fixer_client,,1,1,1,1
 access_fixer_jobtype,fixer.jobtype,fixer.model_fixer_jobtype,,1,1,1,1
 access_fixer_equipment,fixer.equipment,fixer.model_fixer_equipment,,1,1,1,1
 access_fixer_workman,fixer.workman,fixer.model_fixer_workman,,1,1,1,1
-access_fixer_job,fixer.job,fixer.model_fixer_job,,1,1,1,1
+access_fixer_order_type,fixer.order.type,fixer.model_fixer_order_type,,1,1,1,1
 access_fixer_order,fixer.order,fixer.model_fixer_order,,1,1,1,1
 access_fixer_brand,fixer.brand,fixer.model_fixer_brand,,1,1,1,1
 access_fixer_equipment_model,fixer.equipment.model,fixer.model_fixer_equipment_model,,1,1,1,1
